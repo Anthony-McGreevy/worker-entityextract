@@ -1,0 +1,38 @@
+---
+tag: "test1.yaml"
+testCaseInformation:
+  associatedTickets: null
+  comments: "test1.yaml"
+  description: null
+  testCaseId: "test1.yaml"
+inputData:
+  task:
+    customData:
+      fieldsToDetect: "[CONTENT]"
+      grammars: "[\"en-ner-location\", \"en-ner-person\", \"en-ner-date\"]"
+    fields:
+      CONTENT:
+      - data: "Philip Crooks, Anthony McGreevy, this shouldnt be detected.\
+          \ New York is awesome, how is Australia, do you like Melbourne? I think\
+          \ i might stay here to the end of April, maybe May, lets see how it goes."
+expectedOutputData:
+  result:
+    fieldChanges:
+      SUSPECTED_PII:
+        action: "add"
+        values:
+        - data: "en-ner-location"
+        - data: "en-ner-person"
+        - data: "en-ner-date"
+      SUSPECTED_PII_EN_NER_DATE_AVERAGE_CONFIDENCE_SCORE:
+        action: "add"
+        values:
+        - data: "41.46"
+      SUSPECTED_PII_EN_NER_LOCATION_AVERAGE_CONFIDENCE_SCORE:
+        action: "add"
+        values:
+        - data: "40.10"
+      SUSPECTED_PII_EN_NER_PERSON_AVERAGE_CONFIDENCE_SCORE:
+        action: "add"
+        values:
+        - data: "80.21"

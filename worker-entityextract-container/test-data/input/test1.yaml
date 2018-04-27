@@ -1,0 +1,7 @@
+---
+fields:
+  CONTENT:
+    - data: "Philip Crooks, Anthony McGreevy, this shouldnt be detected. New York is awesome, how is Australia, do you like Melbourne? I think i might stay here to the end of April, maybe May, lets see how it goes."
+customData:
+  grammars: "[\"en-ner-location\", \"en-ner-person\", \"en-ner-date\"]"
+  fieldsToDetect: "[CONTENT]"

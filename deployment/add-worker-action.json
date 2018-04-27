@@ -1,0 +1,20 @@
+{
+    "name": "worker-entityextract",
+    "description": "[Include description here]",
+    "order": 1100,
+    "settings": {
+        "workerName": "worker-entityextract",
+        "queueName": "dataprocessing-fs-worker-entityextract-in"
+    },
+    "typeName": "DocumentWorkerHandler",
+    "actionConditions": [
+        {
+            "name": "If reference exists",
+            "additional": {
+                "type": "exists",
+                "field": "reference",
+                "notes": "If reference exists: Reference Lookup"
+            }
+        }
+    ]
+}
