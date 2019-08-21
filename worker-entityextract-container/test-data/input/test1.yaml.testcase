@@ -12,9 +12,9 @@ inputData:
       grammars: "[\"en-ner-location\", \"en-ner-person\", \"en-ner-date\"]"
     fields:
       CONTENT:
-      - data: "Philip Crooks, Anthony McGreevy, this shouldnt be detected.\
-          \ New York is awesome, how is Australia, do you like Melbourne? I think\
-          \ i might stay here to the end of April, maybe May, lets see how it goes."
+      - data: "Philip Crooks, Anthony McGreevy, this shouldnt be detected. New York\
+          \ is awesome, how is Australia, do you like Melbourne? I think i might stay\
+          \ here to the end of April, maybe May, lets see how it goes."
 expectedOutputData:
   result:
     fieldChanges:
@@ -35,4 +35,4 @@ expectedOutputData:
       SUSPECTED_PII_EN_NER_PERSON_AVERAGE_CONFIDENCE_SCORE:
         action: "add"
         values:
-        - data: "80.21"
+        - data: "86.45"
