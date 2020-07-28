@@ -36,11 +36,15 @@
         <dependency>
             <groupId>com.github.mcgreevy</groupId>
             <artifactId>worker-entityextract</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.github.cafdataprocessing</groupId>
             <artifactId>worker-document</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.cafapi.logging</groupId>
+            <artifactId>caf-logging-logback</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.github.cafdataprocessing</groupId>
@@ -198,7 +202,7 @@
                 <configuration>
                     <watchInterval>500</watchInterval>
                     <logDate>default</logDate>
-                    <autoPull>always</autoPull>
+                    <!--<autoPull>always</autoPull>-->
                     <verbose>true</verbose>
                     <images>
                         <!-- WebDav -->
@@ -259,7 +263,7 @@
                             <name>${worker-entityextract.container.name}</name>
                             <build>
                                 <maintainer>conal.smith@hpe.com</maintainer>
-                                <from>cafapi/opensuse-jre8:1.2</from>
+                                <from>cafapi/opensuse-jre8:1</from>
                                 <labels>
                                     <caf.worker-document-framework.version>${caf.worker-document-framework.version}</caf.worker-document-framework.version>
                                 </labels>

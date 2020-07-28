@@ -15,17 +15,6 @@ import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
 import opennlp.tools.util.Span;
 
-/**
- * This is an example implementation of the DocumentWorker interface.
- * <p>
- * Implementing the DocumentWorker interface provides an easy way to efficiently integrate into the Data Processing pipeline. Documents
- * passing through the pipeline can be routed to the worker and enriched from an external source such as a database.
- * <p>
- * The example implementation simply does a lookup from an internal in-memory map.
- * <p>
- * If it would be more efficient to process multiple documents together then the BulkDocumentWorker interface can be implemented instead
- * of the DocumentWorker interface.
- */
 public class WorkerEntityExtract implements DocumentWorker
 {
     public WorkerEntityExtract()
